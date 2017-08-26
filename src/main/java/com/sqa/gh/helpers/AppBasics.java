@@ -1,27 +1,9 @@
-/**
- * File Name: AppBasics.java<br>
- * Nepton, Jean-francois<br>
- * Java Boot Camp Exercise<br>
- * Instructor: George Hanna<br>
- * Created: Aug 23, 2017
- */
 package com.sqa.gh.helpers;
 
 import java.util.*;
 
 import com.sqa.gh.helpers.exceptions.*;
 
-/**
- * AppBasics //ADDD (description of class)
- * <p>
- * //ADDD (description of core fields)
- * <p>
- * //ADDD (description of core methods)
- *
- * @author Nepton, Jean-francois
- * @version 1.0.0
- * @since 1.0
- */
 public class AppBasics {
 
 	private static Scanner scanner = new Scanner(System.in);
@@ -46,6 +28,16 @@ public class AppBasics {
 		// variable
 		System.out.print("Can I get your name? ");
 		return scanner.nextLine();
+	}
+
+	public static void greetUserAndIntroTest(String appName, String testName) {
+		// Greet the user using a system out call
+		System.out.println("Welcome to the " + appName + " Application.");
+		// Ask the user for their name and store in a local scope String
+		// variable
+		System.out.println("\\-------------------------------------------------------------------\\");
+		System.out.println("You are running the following tests for " + testName);
+		System.out.println("\\-------------------------------------------------------------------\\\n");
 	}
 
 	public static boolean requestBoolean(String question) {
