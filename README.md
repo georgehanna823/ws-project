@@ -1,6 +1,6 @@
-# Automation Project
+# Adactin Hotel Project
 
-*Structure for creating a Basic Java Project.*
+*Adactin Hotel Automated Testing Project.*
 
 **Java 7**
 
