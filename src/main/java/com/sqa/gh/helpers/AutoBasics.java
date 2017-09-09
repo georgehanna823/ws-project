@@ -2,7 +2,10 @@ package com.sqa.gh.helpers;
 
 import java.io.*;
 import java.util.*;
+import java.util.NoSuchElementException;
 
+import org.apache.commons.io.*;
+import org.openqa.selenium.*;
 import org.testng.log4testng.*;
 
 public class AutoBasics {
@@ -19,5 +22,26 @@ public class AutoBasics {
 			logger.warn("Can not load config properties file can not be read: " + fileName);
 		}
 		return props.getProperty(propName);
+	}
+
+	public static boolean isElementPresent(WebDriver driver, By by, Logger logger) {
+		try {
+			WebElement element = driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			logger.warn("Element was not found: " + by);
+			return false;
+		}
+	}
+
+	public static boolean takeScreenshot(String fileLocation, String fileName, WebDriver driver, Logger logger) {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(srcFile, new File(fileLocation + "/" + fileName + ".png"));
+			return true;
+		} catch (IOException e) {
+			logger.warn("Screenshot " + fileName + " was not captured to disk correctly.");
+			return false;
+		}
 	}
 }

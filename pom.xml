@@ -48,6 +48,14 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.15</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.saucelabs.selenium/sauce-ondemand-driver -->
+		<dependency>
+			<groupId>com.saucelabs.selenium</groupId>
+			<artifactId>sauce-ondemand-driver</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<properties>
@@ -61,6 +69,7 @@
 		<java-src.version>1.8</java-src.version>
 		<java-tar.version>1.8</java-tar.version>
 		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+		<sauce-ondemand-driver.version>1.2</sauce-ondemand-driver.version>
 	</properties>
 
 	<build>
