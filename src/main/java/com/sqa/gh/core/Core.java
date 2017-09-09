@@ -12,6 +12,8 @@ public class Core {
 
 	private BasicTest curTest;
 
+	private Logger log;
+
 	public Core(BasicTest test) {
 		super();
 		this.baseUrl = test.getBaseUrl();
@@ -36,6 +38,14 @@ public class Core {
 
 	public WebDriver getDriver() {
 		return this.driver;
+	}
+
+	public Logger getLog() {
+		return this.log;
+	}
+
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
 	}
 
 	public String getProp(String propName) {
