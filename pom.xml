@@ -61,7 +61,6 @@
 		<java-src.version>1.8</java-src.version>
 		<java-tar.version>1.8</java-tar.version>
 		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
-		<user.name>Anne</user.name>
 	</properties>
 
 	<build>
