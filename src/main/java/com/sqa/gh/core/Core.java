@@ -1,6 +1,7 @@
 package com.sqa.gh.core;
 
 import org.openqa.selenium.*;
+import org.testng.log4testng.*;
 
 import com.sqa.gh.helpers.*;
 
@@ -42,10 +43,6 @@ public class Core {
 
 	public Logger getLog() {
 		return this.log;
-	}
-
-	public String getProp(String propName) {
-		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
 	}
 
 	public String getProp(String propName) {
